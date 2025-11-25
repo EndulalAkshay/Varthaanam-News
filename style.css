@@ -1,0 +1,713 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  line-height: 1.6;
+  background-color: color(srgb red green blue);
+  color: black;
+}
+
+/* HEADER */
+header {
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 4px solid crimson;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* LANGUAGE LINKS */
+.language-links {
+  margin-bottom: 10px;
+}
+
+.language-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 0.9rem;
+}
+
+.language-links a:hover {
+
+  text-decoration:underline  crimson 2px;
+}
+
+/* SECTION DROPDOWN */
+#different-sections {
+  margin: 10px 0;
+}
+
+#section-select {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  color: #1a1a1a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+#section-select:hover {
+  border-color: crimson;
+  box-shadow: 0 3px 8px rgba(220,20,60,0.2);
+}
+
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.nav-links {
+  margin-bottom: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  background-color: crimson;
+  padding: 8px 15px;
+  margin: 3px;
+  border-radius: 5px;
+  transition: background-colour 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #d12b2b;
+}
+
+.nav-buttons button {
+  background-color: white;
+  color: crimson;
+  border: 2px solid crimson;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-buttons button:hover {
+  background-color: crimson;
+  color: white;
+}
+
+/* MAIN CONTENT */
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+/* SECTIONS */
+section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  border-bottom: 3px solid crimson;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  color: crimson;
+}
+
+/* ARTICLES */
+article {
+  margin-bottom: 15px;
+}
+
+article h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+article p {
+  margin-bottom: 5px;
+}
+
+article a {
+  color: crimson;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article a:hover {
+  text-decoration: underline;
+}
+
+/* ASIDE */
+aside {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-top: 15px;
+  border-left: 4px solid crimson;
+  border-radius: 5px;
+}
+
+aside h3 {
+  color: crimson;
+  margin-bottom: 10px;
+}
+
+/* CONTACT FORM */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #a50000;
+}
+
+/* FOOTER */
+footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: crimson;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    margin: 5px 0;
+  }
+
+  main {
+    width: 95%;
+  }
+}
+/* --- POLITICS CAROUSEL STYLING --- */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* For Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.news-card {
+  min-width: 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: scale(1.03);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color:crimson;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background-color: crimson;
+}
+
+.carousel-btn.prev {
+  left: 5px;
+}
+
+.carousel-btn.next {
+  right: 5px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .news-card {
+    min-width: 80%;
+  }
+
+  .carousel-btn {
+    display: none; /* Hide buttons on mobile, use swipe instead */
+  }
+}
+/* --- HOME SECTION STYLING --- */
+.home-section {
+  margin-top: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('images/newpaper\ image.png') center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: underline crimson;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+.explore-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #a50000;
+}
+
+/* About Section */
+.about-varthanam {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.about-varthanam h2 {
+  color: crimson;
+  border-bottom: 3px solid crimson;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Latest News */
+.latest-news {
+  margin-top: 30px;
+}
+
+.latest-news h2 {
+  color: crimson;
+  border-bottom: 3px solid crimson;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.news-grid article {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.news-grid article:hover {
+  transform: scale(1.03);
+}
+
+/* Trending Aside */
+aside {
+  background-color: #f8f8f8;
+  padding: 15px;
+  margin-top: 25px;
+  border-left: 4px solid crimson;
+  border-radius: 5px;
+}
+/* --- CAROUSEL STYLING --- */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.news-card {
+  min-width: 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: scale(1.03);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: crimson;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background-color: #a50000;
+}
+
+.carousel-btn.prev {
+  left: 5px;
+}
+
+.carousel-btn.next {
+  right: 5px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .news-card {
+    min-width: 80%;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+}
+#trending ul {
+  list-style-type: none; /* Removes dots */
+  padding: 0;
+  margin: 0;
+}
+
+#trending li {
+  margin: 10px 0;
+}
+
+#trending a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  background-color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+#trending a:hover {
+  background-color: #e3f2fd;
+  border-left: 4px solid #1976d2;
+  color: #0d47a1;
+  transform: translateX(5px);
+}
+
+/* Section for displaying clicked topic */
+#trending-content {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#trending-content h2 {
+  color: crimson;
+  border-bottom: 3px solid crimson;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+/* Footer styling */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  position: relative;
+}
+
+/* Notes container */
+#notes-container {
+  position: fixed;
+  bottom: 90px; /* <-- lifted above footer */
+  right: 25px;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+}
+
+/* Floating notes button */
+#open-notes {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#open-notes:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+}
+
+/* Hide checkbox */
+#toggle-notes {
+  display: none;
+}
+
+/* Notes popup (hidden by default) */
+#notes-popup {
+  display: none;
+  position: fixed;
+  bottom: 160px; /* above the button */
+  right: 35px;
+  width: 280px;
+  background-color: #f9f9f9;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Show popup when checkbox checked */
+#toggle-notes:checked ~ #notes-popup {
+  display: block;
+}
+
+/* Popup content */
+#notes-popup h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+#notes-text {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+/* Close button */
+#close-notes {
+  display: inline-block;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#close-notes:hover {
+  background-color: #b02a37;
+}
+/* Chatbot container */
+#chatbot-container {
+  position: fixed;
+  bottom: 20px; /* stays near the bottom */
+  right: 20px;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+}
+
+/* Floating Chatbot button */
+#open-chatbot {
+  background-color: #6f42c1; /* Purple AI theme */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background-color 0.3s;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#open-chatbot:hover {
+  transform: scale(1.1);
+  background-color: #5a32a3;
+}
+
+/* Hide checkbox */
+#toggle-chatbot {
+  display: none;
+}
+
+/* Chatbot popup (hidden by default) */
+#chatbot-popup {
+  display: none;
+  position: fixed;
+  bottom: 90px; /* opens above the button */
+  right: 30px;
+  width: 280px;
+  background-color: #f8f6ff;
+  border: 2px solid #6f42c1;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+/* Show popup when chatbot button clicked */
+#toggle-chatbot:checked ~ #chatbot-popup {
+  display: block;
+}
+
+/* Popup text styles */
+#chatbot-popup h3 {
+  margin-top: 0;
+  color: #6f42c1;
+  text-align: center;
+}
+
+#chatbot-popup p {
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+#chatbot-text {
+  width: 100%;
+  height: 100px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+/* Close button */
+#close-chatbot {
+  display: inline-block;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-align: center;
+}
+.flash-text {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.flash-text p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
